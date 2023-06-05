@@ -33,7 +33,7 @@ sleep 1
 echo ""
 echo "4. [ INSTALANDO ROOT FS -FEX ]"
 echo ""
-sudo mkdir -p /data/local/debian && cd /data/local/debian && sudo cp /storage/emulated/0/rootfs-Fex.tar.gz /data/local/debian && sudo tar -xvf rootfs-Fex.tar.gz
+sudo mkdir -p /data/local/debian && cd /data/local/debian && sudo cp /storage/emulated/0/rootfs-Fex.tar.gz /data/local/debian && sudo tar -xvf rootfs-Fex.tar.gz && sudo rm -rf rootfs-Fex.tar.gz
 echo ""
 echo "DESCOMPACTADO"
 echo ""
@@ -43,7 +43,7 @@ sleep 1
 echo ""
 echo "5. [ CRIANDO PASTAS ]"
 echo ""
-sudo mkdir dev proc sys dev/pts
+sudo mkdir dev proc sys dev/pts && cd
 echo ""
 echo ""
 echo ""
@@ -53,7 +53,7 @@ sleep 1
 echo ""
 echo "6. [ CRIANDO EXECUTAVEL ]"
 echo ""
-sudo echo '
+echo '
 
 #!/bin/bash
 
@@ -66,9 +66,9 @@ exit 0
 
 ' > x11-start
 
-sudo chmod +x x11-start && mv x11-start $PREFIX/bin
+chmod +x x11-start && mv x11-start $PREFIX/bin
 
-sudo echo '
+echo '
 
 #!/bin/sh
 echo -e ""
@@ -113,10 +113,10 @@ exit 0
 
 ' > chroot.sh
 
-sudo mv chroot.sh $HOME && cd $HOME && chmod 777 chroot.sh
+mv chroot.sh $HOME && cd $HOME && chmod 777 chroot.sh
 
 
-sudo echo '
+echo '
 
 #!/bin/bash
 
@@ -125,9 +125,9 @@ sudo echo '
 x11-start
 
 su
-./chroot.sh '> start-fex
+./chroot.sh ' > start-fex
 
-sudo chmod +x start-fex && sudo mv start-fex $PREFIX/bin
+chmod +x start-fex && sudo mv start-fex $PREFIX/bin
 
 cd
 
