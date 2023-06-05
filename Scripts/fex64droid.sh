@@ -43,7 +43,7 @@ sleep 1
 echo ""
 echo "5. [ CRIANDO PASTAS ]"
 echo ""
-mkdir dev proc sys dev/pts
+sudo mkdir dev proc sys dev/pts
 echo ""
 echo ""
 echo ""
