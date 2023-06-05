@@ -1,7 +1,6 @@
 # FEX-android
 FEX Quick Installation Script on Android Devices 
 This script is made to automate the process of installing fex-emu on Android devices.
-the original project can be found here @"FEX-source-code"
 
 
 # WHAT-IS-FEX
