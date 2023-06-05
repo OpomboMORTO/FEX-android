@@ -33,7 +33,7 @@ sleep 1
 echo ""
 echo "4. [ INSTALANDO ROOT FS -FEX ]"
 echo ""
-sudo mkdir -p /data/local/debian && cd /data/local/debian && sudo cp /storage/emulated/0/rootfs-Fex.tar.gz /data/local/debian && tar -xvf rootfs-Fex.tar.gz
+sudo mkdir -p /data/local/debian && cd /data/local/debian && sudo cp /storage/emulated/0/rootfs-Fex.tar.gz /data/local/debian && sudo tar -xvf rootfs-Fex.tar.gz
 echo ""
 echo "DESCOMPACTADO"
 echo ""
