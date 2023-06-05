@@ -53,7 +53,7 @@ sleep 1
 echo ""
 echo "6. [ CRIANDO EXECUTAVEL ]"
 echo ""
-echo '
+sudo echo '
 
 #!/bin/bash
 
@@ -66,9 +66,9 @@ exit 0
 
 ' > x11-start
 
-chmod +x x11-start && mv x11-start $PREFIX/bin
+sudo chmod +x x11-start && mv x11-start $PREFIX/bin
 
-echo '
+sudo echo '
 
 #!/bin/sh
 echo -e ""
@@ -113,11 +113,10 @@ exit 0
 
 ' > chroot.sh
 
-mv chroot.sh $HOME && chmod 777 chroot.sh
+sudo mv chroot.sh $HOME && cd $HOME && chmod 777 chroot.sh
 
-cd
 
-echo '
+sudo echo '
 
 #!/bin/bash
 
@@ -128,7 +127,7 @@ x11-start
 su
 ./chroot.sh '> start-fex
 
-chmod +x start-fex && mv start-fex $PREFIX/bin
+sudo chmod +x start-fex && sudo mv start-fex $PREFIX/bin
 
 cd
 
