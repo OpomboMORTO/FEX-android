@@ -13,4 +13,7 @@ t has native support for a rootfs overlay, so you don't need to chroot, as well 
 
 https://github.com/FEX-Emu/FEX
 
+# install fex64droid
+
+first install Termux-11 is Termux, after initializing Termux for the first time, copy and paste this command and hit enter: curl -o https://raw.githubusercontent.com/OpomboMORTO/FEX-android/main/Scripts/fex64droid.sh
 
