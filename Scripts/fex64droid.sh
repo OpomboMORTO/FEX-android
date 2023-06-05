@@ -3,7 +3,7 @@
 echo ""
 echo "1. [ PERMISSÕES DE ARMAZENAMENTO ]"
 echo ""
-termux-setup-storage && pkg update -y && pkg clean && pkg upgrade -y
+termux-setup-storage && pkg update -y && pkg clean && pkg upgrade -y 
 echo ""
 echo "PERMISSÕES ATUALIZADAS"
 echo ""
@@ -13,7 +13,7 @@ sleep 1
 echo ""
 echo "2. [ INSTALANDO X11 ]"
 echo ""
-pkg install root-repo -y && pkg install tsu -y &&  pkg install x11-repo && pkg install pulseaudio xwayland xorg-server-xvfb wget -y && wget https://github.com/OpomboMORTO/FEX-android/raw/main/Apps/termux-x11-1.02.07-0-all.deb && dpkg -i ./*.deb && rm -rf ./*.deb
+pkg install root-repo -y && pkg install tsu -y &&  pkg install x11-repo && pkg install pulseaudio xwayland xorg-server-xvfb busybox wget -y && wget https://github.com/OpomboMORTO/FEX-android/raw/main/Apps/termux-x11-1.02.07-0-all.deb && dpkg -i ./*.deb && rm -rf ./*.deb
 echo ""
 echo "X11 INSTALADO"
 echo ""
@@ -113,7 +113,7 @@ exit 0
 
 ' > chroot.sh
 
-mv chroot.sh $HOME && cd $HOME && chmod 777 chroot.sh
+sudo chmod 777 chroot.sh b
 
 
 echo '
