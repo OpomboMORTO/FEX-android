@@ -33,7 +33,7 @@ sleep 1
 echo ""
 echo "4. [ INSTALANDO ROOT FS -FEX ]"
 echo ""
-sudo mkdir -p $HOME/Fex-emu && cd $HOME/fex-emu && sudo cp /storage/emulated/0/rootfs-Fex.tar.gz $HOME/fex-emu && sudo tar -xvf rootfs-Fex.tar.gz && sudo rm -rf rootfs-Fex.tar.gz
+sudo mkdir -p $HOME/Fex-emu && cd $HOME/Fex-emu && sudo cp /storage/emulated/0/rootfs-Fex.tar.gz $HOME/Fex-emu && sudo tar -xvf rootfs-Fex.tar.gz && sudo rm -rf rootfs-Fex.tar.gz
 echo ""
 echo "DESCOMPACTADO"
 echo ""
