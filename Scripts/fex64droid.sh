@@ -60,7 +60,7 @@ echo '
 echo ""
 echo "1. [ INICIANDO TERMUX:X11 ]"
 
-DISPLAY=:1 termux-x11 &>/dev/null & env DISPLAY=:1 Xvfb -listen tcp :1 -ac -screen 0 1280x720x24 &>/dev/null & pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1 &>/dev/null
+DISPLAY=:1 termux-x11 &>/dev/null & env DISPLAY=:0 Xvfb -listen tcp :1 -ac -screen 0 1280x720x24 &>/dev/null & pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1 &>/dev/null
 
 exit 0
 
@@ -153,12 +153,11 @@ echo '
 
 #!/bin/bash
 
-./chroot.sh
+
 
 x11-start
 
-su
-./chroot.sh ' > start-fex
+sudo ./chroot.sh ' > start-fex
 
 chmod +x start-fex && sudo mv start-fex $PREFIX/bin
 
