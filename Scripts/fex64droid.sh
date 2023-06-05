@@ -71,49 +71,82 @@ chmod +x x11-start && mv x11-start $PREFIX/bin
 echo '
 
 #!/bin/sh
+
+unset LD_PRELOAD
+
 echo -e ""
-echo -e "\x1b[32m\033[1m#################################"
-echo -e "\x1b[32m#      Script by Pro-L!nux      #"
-echo -e "\x1b[32m#################################"
+
 export PATH=/sbin:/usr/bin:/usr/sbin:/system/bin:/system/xbin:$PATH
+
 export USER=root
+
 export HOME=/root
+
 export LANGUAGE=C
+
 export LANG=C
-folder=/data/local/debian
+
+folder=/data/data/com.termux/files/home/Fex-emu
+
 echo -e "\x1b[33m [ Mounting system folders ]"
+
 echo "   [ Mounting /dev ... ]"
-busybox mount --bind /dev $folder/dev
+
+sudo mount --bind /dev $folder/dev
+
 echo "   [ Mounting /sys ... ]"
-busybox mount --bind /sys $folder/sys
+
+sudo mount --bind /sys $folder/sys
+
 echo "   [ Mounting /proc ... ]"
-busybox mount --bind /proc $folder/proc
+
+sudo mount --bind /proc $folder/proc
+
 echo "   [ Mounting /dev/pts ... ]"
-busybox mount --bind /dev/pts $folder/dev/pts
+
+sudo mount --bind /dev/pts $folder/dev/pts
+
 echo "   [ Mounting /sdcard ... ]"
-busybox mount --bind /storage/emulated/0/ $folder/storage/emulated/0/
+
+sudo mount --bind /storage/emulated/0/ $folder/storage/emulated/0/
+
 echo -e "\x1b[32m [ Mounting Done ! ]"
 
+sudo touch /data/data/com.termux/files/home/Fex-emu/opt/chroot
+
 echo -e "\x1b[32m [ Chrooting ... ]\e[0m"
-busybox chroot $folder /bin/su - root
+
+sudo chroot $folder /bin/su - root
 
 echo -e "\033[1m\x1b[33m [ Unmounting dev/pts ... ]"
-busybox umount $folder/dev/pts
+
+sudo umount $folder/dev/pts
+
 echo -e " [ Unmounting /dev ... ]"
-busybox umount $folder/dev
+
+sudo umount $folder/dev
+
 echo -e " [ Unmounting /proc ... ]"
-busybox umount $folder/proc
+
+sudo umount $folder/proc
+
 echo -e " [ Unmounting sdcard ... ]"
-busybox umount $folder/storage/emulated/0/
+
+sudo umount $folder/storage/emulated/0/
+
 echo -e " [ Unmounting /sys ... ]"
-busybox umount $folder/sys
+
+sudo umount $folder/sys
+
 echo -e " \x1b[32m[ Unmounted ]\e[0m"
 
 exit 0
 
 ' > chroot.sh
 
-sudo chmod 777 chroot.sh b
+
+
+sudo chmod 777 chroot.sh && mv chroot.sh $PREFIX/bin
 
 
 echo '
