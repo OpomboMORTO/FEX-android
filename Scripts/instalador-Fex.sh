@@ -406,28 +406,27 @@ echo "==============================="
 if [ $opcao = 1 ]
 then
 
-cd $HOME/Fex/opt
-
-rm -rf checkconfig start
-
 curl -O https://raw.githubusercontent.com/OpomboMORTO/FEX-android/main/Rootfs/Ubuntu/opt/checkconfig && chmod +x checkconfig
 curl -O https://raw.githubusercontent.com/OpomboMORTO/FEX-android/main/Rootfs/Ubuntu/opt/Fexconfig && chmod+x Fexconfig
 curl -O https://raw.githubusercontent.com/OpomboMORTO/FEX-android/main/Rootfs/Ubuntu/opt/InstallFex && chmod +x InstallFex
 curl -O https://raw.githubusercontent.com/OpomboMORTO/FEX-android/main/Rootfs/Ubuntu/opt/Fex && chmod +x Fex
 curl -O https://raw.githubusercontent.com/OpomboMORTO/FEX-android/main/Rootfs/Ubuntu/opt/FexMore && chmod +x FexMore
 
-cd Scripts
-
-rm -rf start-box64
+sudo mv FexMore InstallFex start-fex checkconfig Fexconfig /data/data/com.termux/files/home/Fex/opt
 
 curl -O https://raw.githubusercontent.com/OpomboMORTO/FEX-android/main/Rootfs/Ubuntu/opt/start-fex && chmod +x start-fex
+
+sudo mv start-fex sudo mv FexMore InstallFex start-fex checkconfig Fexconfig /data/data/com.termux/files/home/Fex/opt/Scripts
+
+sudo rm /data/data/com.termux/files/home/Fex/ start
+
 
 elif [ $opcao = 2 ]
 then
 
 cd /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/opt
 
-rm -rf checkconfig start
+rm -f checkconfig start
 
 curl -O https://raw.githubusercontent.com/OpomboMORTO/FEX-android/main/Rootfs/Ubuntu/opt/checkconfig && chmod +x checkconfig
 curl -O https://raw.githubusercontent.com/OpomboMORTO/FEX-android/main/Rootfs/Ubuntu/opt/Fexconfig && chmod+x Fexconfig
@@ -437,7 +436,7 @@ curl -O https://raw.githubusercontent.com/OpomboMORTO/FEX-android/main/Rootfs/Ub
 
 cd Scripts
 
-rm -rf start-box64
+rm -f start-box64
 
 curl -O https://raw.githubusercontent.com/OpomboMORTO/FEX-android/main/Rootfs/Ubuntu/opt/start-fex && chmod +x start-fex
 
