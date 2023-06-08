@@ -59,7 +59,7 @@ echo "|   |____________________________°_°_°___|   |    |"
 echo "|                                            |    |"
 echo "=================================================="
 
-    if [ -d /Fex ]
+    if [ -d /data/data/com.termux/files/home/Fex ]
     then
 
         clear
