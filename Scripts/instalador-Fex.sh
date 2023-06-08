@@ -388,6 +388,49 @@ then
        proot-distro restore box64droid-rootfs-beta.tar.xz &>/dev/null
 fi
 
+sleep 1
+
+clear
+
+echo "==============================="
+echo "=                             ="
+echo "=  FINALIZANDO ROOTFS         ="
+echo "=                             ="
+echo "=  [CRT + C] PARA CANCELAR    ="
+echo "=                             ="
+echo "=  AGUARDE .                  ="
+echo "=                             ="
+echo "=                             ="
+echo "==============================="
+
+if [ $opcao = 1 ]
+then
+
+
+
+elif [ $opcao = 2 ]
+then
+
+cd /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/opt
+
+rm -rf checkconfig start
+
+curl -O https://raw.githubusercontent.com/OpomboMORTO/FEX-android/main/Rootfs/Ubuntu/opt/checkconfig && chmod +x checkconfig
+curl -O https://raw.githubusercontent.com/OpomboMORTO/FEX-android/main/Rootfs/Ubuntu/opt/Fexconfig && chmod+x Fexconfig
+curl -O https://raw.githubusercontent.com/OpomboMORTO/FEX-android/main/Rootfs/Ubuntu/opt/InstallFex && chmod +x InstallFex
+curl -O https://raw.githubusercontent.com/OpomboMORTO/FEX-android/main/Rootfs/Ubuntu/opt/Fex && chmod +x Fex
+curl -O https://raw.githubusercontent.com/OpomboMORTO/FEX-android/main/Rootfs/Ubuntu/opt/FexMore && chmod +x FexMore
+
+cd Scripts
+
+rm -rf start-box64
+
+curl -O https://raw.githubusercontent.com/OpomboMORTO/FEX-android/main/Rootfs/Ubuntu/opt/start-fex && chmod +x start-fex
+
+fi
+
+sleep 1
+
 clear
 
 echo "==============================="
