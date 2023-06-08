@@ -148,7 +148,7 @@ echo "=                             ="
 echo "=                             ="
 echo "==============================="
 
-pkg install x11-repo -y &>/dev/null
+pkg install x11-repo -y && pkg install root-repo -y &>/dev/null
 
 clear
 
@@ -163,7 +163,7 @@ echo "=                             ="
 echo "=                             ="
 echo "==============================="
 
-sleep 1
+sleep 2
 
 clear 
 
@@ -218,7 +218,7 @@ echo "=                             ="
 echo "=                             ="
 echo "==============================="
 
-wget https://github.com/OpomboMORTO/FEX-android/raw/main/Apps/termux-x11-1.02.07-0-all.deb && dpkg -i ./*.deb && rm -rf ./*.deb
+wget https://github.com/OpomboMORTO/FEX-android/raw/main/Apps/termux-x11-1.02.07-0-all.deb && dpkg -i ./*.deb && rm -rf ./*.deb &>/dev/null
 
 clear
 
@@ -247,6 +247,8 @@ echo "=  AGUARDE .                  ="
 echo "=                             ="
 echo "=                             ="
 echo "==============================="
+
+mkdir $HOME/Fex
 
 clear 
 
@@ -426,7 +428,7 @@ rm box64droid-rootfs-beta-chroot.tar.xz &>/dev/null
 
 elif [ $opcao = 2 ]
 
-rm -rf box64droid-rootfs-beta*.tar.xz &>/dev/null
+rm -rf box64droid-rootfs-beta.tar.xz &>/dev/null
 
 fi
 
