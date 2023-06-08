@@ -250,7 +250,7 @@ echo "==============================="
 
 sleep 1
 
-mkdir $HOME/Fex
+sudo mkdir $HOME/Fex
 
 clear 
 
@@ -272,7 +272,7 @@ sleep 1
 
 else
 
-mkdir $PREFIX/bin/Fex
+sudo mkdir $PREFIX/bin/Fex
 
 echo "==============================="
 echo "=                             ="
@@ -309,7 +309,7 @@ sleep 1
 
 else
 
-mkdir /storage/Fex
+sudo mkdir /storage/Fex
 
 echo "==============================="
 echo "=                             ="
