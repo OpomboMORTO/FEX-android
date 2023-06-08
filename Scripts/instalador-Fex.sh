@@ -418,7 +418,7 @@ echo "==============================="
 
 curl -O https://raw.githubusercontent.com/OpomboMORTO/FEX-android/main/Scripts/fex &>/dev/null
 chmod +x fex
-mv fex $PREFIX/bin/Fex &>/dev/null
+mv fex $PREFIX/bin &>/dev/null
 
 sleep 1
 
@@ -435,7 +435,7 @@ echo "=                             ="
 echo "=                             ="
 echo "==============================="
 
-cd
+rm -rf instalador-Fex.sh &>/dev/null
 
 if [ $opcao = 1 ]
 then
@@ -447,8 +447,6 @@ elif [ $opcao = 2 ]
 rm -rf box64droid-rootfs-beta.tar.xz &>/dev/null
 
 fi
-
-rm -rf instalador-Fex.sh &>/dev/null
 
 sleep 2
 
