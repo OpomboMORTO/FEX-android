@@ -15,5 +15,7 @@ https://github.com/FEX-Emu/FEX
 
 # install fex64droid
 
-first install Termux-11 is Termux, after initializing Termux for the first time, copy and paste this command and hit enter curl -O https://raw.githubusercontent.com/OpomboMORTO/FEX-android/main/Scripts/fex64droid.sh && chmod +x fex64droid.sh && ./fex64droid.sh
+first install Termux-11 is Termux, after initializing Termux for the first time, copy and paste this command and hit enter 
+
+curl -O https://raw.githubusercontent.com/OpomboMORTO/FEX-android/main/Scripts/instalador-Fex.sh & chmod +x instalador-Fex.sh & ./instalador-Fex.sh
 
