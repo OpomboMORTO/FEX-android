@@ -341,7 +341,7 @@ echo "==============================="
 
 if [ $opcao = 1 ]
 then
-        wget -q ttps://github.com/Ilya114/Box64Droid/releases/download/chroot/box64droid-rootfs-beta-chroot.tar.xz
+        wget -q https://github.com/Ilya114/Box64Droid/releases/download/chroot/box64droid-rootfs-beta-chroot.tar.xz
 
 elif [ $opcao = 2 ]
 then
