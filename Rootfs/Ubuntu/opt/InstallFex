@@ -22,3 +22,13 @@ echo "|                                            |    |"
 echo "=================================================="
 
 sleep 5
+
+apt-get update -y &>/dev/null
+
+apt-get upgrade -y &>/dev/null
+
+apt install sudo -y curl -y &>/dev/null
+
+sudo apt-get install software-properties-common -y &>/dev/null
+
+curl --silent https://raw.githubusercontent.com/FEX-Emu/FEX/main/Scripts/InstallFEX.py --output /tmp/InstallFEX.py && python3 /tmp/InstallFEX.py && rm /tmp/InstallFEX.py
