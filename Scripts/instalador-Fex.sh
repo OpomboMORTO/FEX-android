@@ -406,7 +406,7 @@ echo "==============================="
 if [ $opcao = 1 ]
 then
 
-
+echo ""
 
 elif [ $opcao = 2 ]
 then
