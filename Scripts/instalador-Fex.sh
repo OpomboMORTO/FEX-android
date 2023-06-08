@@ -55,9 +55,8 @@ echo "=        OPÇÃO INVALIDA       ="
 echo "=                             ="
 echo "==============================="
 
-sleep 2
-
 ./instalador-Fex.sh
+
 
 fi
 
@@ -76,7 +75,7 @@ echo "==============================="
 
 clear 
 
-termux-setup-storage & sleep 3 &>dev/null
+termux-setup-storage & sleep 9 &>dev/null
 
 echo "==============================="
 echo "=                             ="
@@ -164,6 +163,8 @@ echo "=                             ="
 echo "=                             ="
 echo "==============================="
 
+sleep 1
+
 clear 
 
 echo "==============================="
@@ -202,6 +203,8 @@ echo "=                             ="
 echo "=                             ="
 echo "==============================="
 
+sleep 1
+
 clear
 
 echo "==============================="
@@ -229,6 +232,8 @@ echo "=  AGUARDE .                  ="
 echo "=                             ="
 echo "=                             ="
 echo "==============================="
+
+sleep 1
 
 clear
 
@@ -328,10 +333,10 @@ then
 
 elif [ $opcao = 2 ]
 then
-        mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/ &>/dev/null
-	mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ &>/dev/null
-	mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu &>/dev/null
-	wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/beta/box64droid-rootfs-beta.tar.xz 
+        mkdir -p /data/data/com.termux/files/usr/var/lib/proot-distro/ &>/dev/null
+	mkdir -p /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ &>/dev/null
+	mkdir -p /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu &>/dev/null
+	wget -q https://github.com/Ilya114/Box64Droid/releases/download/beta/box64droid-rootfs-beta.tar.xz 
 fi
 
 clear
