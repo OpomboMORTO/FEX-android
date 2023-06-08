@@ -55,7 +55,7 @@ echo "=        OPÇÃO INVALIDA       ="
 echo "=                             ="
 echo "==============================="
 
-./instalador-Fex.sh
+
 
 
 fi
