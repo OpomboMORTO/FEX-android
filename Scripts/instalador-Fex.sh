@@ -443,6 +443,7 @@ then
 rm box64droid-rootfs-beta-chroot.tar.xz &>/dev/null
 
 elif [ $opcao = 2 ]
+then
 
 rm -rf box64droid-rootfs-beta.tar.xz &>/dev/null
 
