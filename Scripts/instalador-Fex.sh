@@ -418,7 +418,9 @@ curl -O https://raw.githubusercontent.com/OpomboMORTO/FEX-android/main/Rootfs/Ub
 
 sudo mv start-fex sudo mv FexMore InstallFex start-fex checkconfig Fexconfig /data/data/com.termux/files/home/Fex/opt/Scripts
 
-sudo rm /data/data/com.termux/files/home/Fex/ start
+sudo rm -f /data/data/com.termux/files/home/Fex/opt start
+
+sudo rm -f /data/data/com.termux/files/home/Fex/opt/Scripts start-box64
 
 
 elif [ $opcao = 2 ]
