@@ -1,0 +1,16 @@
+#!/bin/bash
+
+cd /opt
+
+chmod +x Fexconfig
+chmod +x Fex
+chmod +x InstallFex
+chmod +x FexMore
+
+cd Scripts
+
+chmod +x start-fex
+
+cd ..
+
+./Fexconfig
