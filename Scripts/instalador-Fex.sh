@@ -69,7 +69,7 @@ echo "=                             ="
 echo "=                             ="
 echo "=                             ="
 echo "=                             ="
-echo "=    INICIANDO INSTALAÇÃO     ="
+echo "=                             ="
 echo "=                             ="
 echo "==============================="
 
@@ -148,7 +148,7 @@ echo "=                             ="
 echo "=                             ="
 echo "==============================="
 
-pkg install x11-repo -y && pkg install root-repo -y &>/dev/null
+pkg install x11-repo root-repo -y &>/dev/null
 
 clear
 
@@ -218,7 +218,7 @@ echo "=                             ="
 echo "=                             ="
 echo "==============================="
 
-wget https://github.com/OpomboMORTO/FEX-android/raw/main/Apps/termux-x11-1.02.07-0-all.deb && dpkg -i ./*.deb && rm -rf ./*.deb &>/dev/null
+wget https://github.com/OpomboMORTO/FEX-android/raw/main/Apps/termux-x11-1.02.07-0-all.deb &>/dev/null && dpkg -i ./*.deb &>/dev/null && rm -rf ./*.deb &>/dev/null
 
 clear
 
@@ -248,6 +248,8 @@ echo "=                             ="
 echo "=                             ="
 echo "==============================="
 
+sleep 1
+
 mkdir $HOME/Fex
 
 clear 
@@ -257,7 +259,7 @@ then
 
 echo "==============================="
 echo "=                             ="
-echo "=  DIRETORIO FEX JA EXISTE    ="
+echo "=  DIRETORIO PREFIX JA EXISTE ="
 echo "=                             ="
 echo "=  [CRT + C] PARA CANCELAR    ="
 echo "=                             ="
@@ -265,6 +267,8 @@ echo "=  AGUARDE .                  ="
 echo "=                             ="
 echo "=                             ="
 echo "==============================="
+
+sleep 1
 
 else
 
@@ -272,7 +276,7 @@ mkdir $PREFIX/bin/Fex
 
 echo "==============================="
 echo "=                             ="
-echo "=  DIRETORIO FEX CRIADO  ✓    ="
+echo "=  DIRETORIO PREFIX CRIADO    ="
 echo "=                             ="
 echo "=  [CRT + C] PARA CANCELAR    ="
 echo "=                             ="
@@ -280,6 +284,8 @@ echo "=  AGUARDE .                  ="
 echo "=                             ="
 echo "=                             ="
 echo "==============================="
+
+sleep 1
 
 fi
 
@@ -299,6 +305,8 @@ echo "=                             ="
 echo "=                             ="
 echo "==============================="
 
+sleep 1
+
 else
 
 mkdir /storage/Fex
@@ -313,6 +321,8 @@ echo "=  AGUARDE .                  ="
 echo "=                             ="
 echo "=                             ="
 echo "==============================="
+
+sleep 1
 
 fi
 
@@ -354,6 +364,8 @@ echo "=                             ="
 echo "=                             ="
 echo "==============================="
 
+sleep 1
+
 clear
 
 echo "==============================="
@@ -389,6 +401,8 @@ echo "=                             ="
 echo "=                             ="
 echo "==============================="
 
+sleep 1
+
 clear
 
 echo "==============================="
@@ -405,6 +419,8 @@ echo "==============================="
 curl -O https://raw.githubusercontent.com/OpomboMORTO/FEX-android/main/Scripts/fex &>/dev/null
 chmod +x fex
 mv fex $PREFIX/bin/Fex &>/dev/null
+
+sleep 1
 
 clear
 
