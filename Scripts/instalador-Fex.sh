@@ -422,6 +422,8 @@ sudo mv start-fex /data/data/com.termux/files/home/Fex/opt/Scripts
 
 sudo rm -f /data/data/com.termux/files/home/Fex/opt/start
 
+sudo rm -f /data/data/com.termux/files/home/Fex/opt/Box64Droid.conf
+
 sudo rm -f /data/data/com.termux/files/home/Fex/opt/Scripts/start-box64
 
 
