@@ -412,13 +412,13 @@ curl -O https://raw.githubusercontent.com/OpomboMORTO/FEX-android/main/Rootfs/Ub
 curl -O https://raw.githubusercontent.com/OpomboMORTO/FEX-android/main/Rootfs/Ubuntu/opt/Fex && chmod +x Fex
 curl -O https://raw.githubusercontent.com/OpomboMORTO/FEX-android/main/Rootfs/Ubuntu/opt/FexMore && chmod +x FexMore
 
-sudo mv FexMore InstallFex start-fex checkconfig Fexconfig /data/data/com.termux/files/home/Fex/opt
+sudo mv FexMore InstallFex Fex checkconfig Fexconfig /data/data/com.termux/files/home/Fex/opt
 
 curl -O https://raw.githubusercontent.com/OpomboMORTO/FEX-android/main/Rootfs/Ubuntu/opt/start-fex && chmod +x start-fex
 
-sudo mv start-fex sudo mv FexMore InstallFex start-fex checkconfig Fexconfig /data/data/com.termux/files/home/Fex/opt/Scripts
+sudo mv start-fex /data/data/com.termux/files/home/Fex/opt/Scripts
 
-sudo rm -f /data/data/com.termux/files/home/Fex/opt start
+sudo rm -f /data/data/com.termux/files/home/Fex/opt start Box64Droid.conf
 
 sudo rm -f /data/data/com.termux/files/home/Fex/opt/Scripts start-box64
 
