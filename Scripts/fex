@@ -193,7 +193,7 @@ echo "|   |____________________________°_°_°___|   |    |"
 echo "|                                            |    |"
 echo "=================================================="
 
-        sudo mount --bind /storage/emulated/0/ $folder/storage/emulated/0/
+         sudo mount --bind /sdcard $folder/sdcard
 
 clear
 
