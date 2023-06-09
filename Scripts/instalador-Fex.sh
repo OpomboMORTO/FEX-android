@@ -406,19 +406,21 @@ echo "==============================="
 if [ $opcao = 1 ]
 then
 
-curl -O https://raw.githubusercontent.com/OpomboMORTO/FEX-android/main/Rootfs/Ubuntu/opt/checkconfig && chmod +x checkconfig
-curl -O https://raw.githubusercontent.com/OpomboMORTO/FEX-android/main/Rootfs/Ubuntu/opt/Fexconfig && chmod+x Fexconfig
-curl -O https://raw.githubusercontent.com/OpomboMORTO/FEX-android/main/Rootfs/Ubuntu/opt/InstallFex && chmod +x InstallFex
-curl -O https://raw.githubusercontent.com/OpomboMORTO/FEX-android/main/Rootfs/Ubuntu/opt/Fex && chmod +x Fex
-curl -O https://raw.githubusercontent.com/OpomboMORTO/FEX-android/main/Rootfs/Ubuntu/opt/FexMore && chmod +x FexMore
+cd Fex
+
+sudo curl -O https://raw.githubusercontent.com/OpomboMORTO/FEX-android/main/Rootfs/Ubuntu/opt/checkconfig && sudo chmod +x checkconfig
+sudo curl -O https://raw.githubusercontent.com/OpomboMORTO/FEX-android/main/Rootfs/Ubuntu/opt/Fexconfig && sudo chmod+x Fexconfig
+sudo curl -O https://raw.githubusercontent.com/OpomboMORTO/FEX-android/main/Rootfs/Ubuntu/opt/InstallFex && sudo chmod +x InstallFex
+sudo curl -O https://raw.githubusercontent.com/OpomboMORTO/FEX-android/main/Rootfs/Ubuntu/opt/Fex && sudo chmod +x Fex
+sudo curl -O https://raw.githubusercontent.com/OpomboMORTO/FEX-android/main/Rootfs/Ubuntu/opt/FexMore && sudo chmod +x FexMore
 
 sudo mv FexMore InstallFex Fex checkconfig Fexconfig /data/data/com.termux/files/home/Fex/opt
 
-curl -O https://raw.githubusercontent.com/OpomboMORTO/FEX-android/main/Rootfs/Ubuntu/opt/start-fex && chmod +x start-fex
+sudo curl -O https://raw.githubusercontent.com/OpomboMORTO/FEX-android/main/Rootfs/Ubuntu/opt/start-fex && sudo chmod +x start-fex
 
 sudo mv start-fex /data/data/com.termux/files/home/Fex/opt/Scripts
 
-sudo rm -f /data/data/com.termux/files/home/Fex/opt start Box64Droid.conf
+sudo rm -f /data/data/com.termux/files/home/Fex/opt start
 
 sudo rm -f /data/data/com.termux/files/home/Fex/opt/Scripts start-box64
 
