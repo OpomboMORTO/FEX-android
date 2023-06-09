@@ -48,7 +48,7 @@ echo "|   |____________________________°_°_°___|   |    |"
 echo "|                                            |    |"
 echo "=================================================="
 
-WINEDEBUG=-all FEXInterpreter /opt/wine/bin/wine explorer /desktop=shell,800x600 /opt/TFM &>/dev/null &
+WINEDEBUG=-all DXVK_HUD=fps,gpuload,version taskset -c 4-7 box64 wine64 explorer /desktop=shell,800x600 /opt/TFM &>/dev/null & FEXInterpreter /opt/wine/bin/wine64 explorer /desktop=shell,800x600 &>/dev/null
 
 elif [ $res = "2" ]
 then
@@ -74,7 +74,7 @@ echo "|   |____________________________°_°_°___|   |    |"
 echo "|                                            |    |"
 echo "=================================================="
 
-WINEDEBUG=-all FEXInterpreter /opt/wine/bin/wine explorer /desktop=shell,1024x768 /opt/TFM &>/dev/null &
+WINEDEBUG=-all DXVK_HUD=fps,gpuload,version taskset -c 4-7 box64 wine64 explorer /desktop=shell,1024x768 /opt/TFM &>/dev/null & FEXInterpreter /opt/wine/bin/wine64 explorer /desktop=shell,1024x768 &>/dev/null
 
 elif [ $res = "3" ]
 then
@@ -100,7 +100,7 @@ echo "|   |____________________________°_°_°___|   |    |"
 echo "|                                            |    |"
 echo "=================================================="
 
-WINEDEBUG=-all FEXInterpreter /opt/wine/bin/wine explorer /desktop=shell,1280x720 /opt/TFM &>/dev/null &
+WINEDEBUG=-all DXVK_HUD=fps,gpuload,version taskset -c 4-7 box64 wine64 explorer /desktop=shell,1280x720 /opt/TFM &>/dev/null & FEXInterpreter /opt/wine/bin/wine64 explorer /desktop=shell,1280x720 &>/dev/null
 
 elif [ $res = "5" ]
 then
@@ -113,7 +113,7 @@ echo "|   _____________________________________    | \ "
 echo "|   |   _______________|________   |  - ×|   |  \ "
 echo "|   |   |•___________________- ×|  |     |   |   \ "
 echo "|   |   |                       |  |     |   |    |"
-echo "|   |   | res = (1600x720)      |  |     |   |    |"
+echo "|   |   | res = (1600x1040)     |  |     |   |    |"
 echo "|   |   |                       |__|     |   |\   |"
 echo "|   |   |                       ||       |   | \  |"
 echo "|   |   | x11 start             ||       |   |  \ |"
@@ -126,7 +126,7 @@ echo "|   |____________________________°_°_°___|   |    |"
 echo "|                                            |    |"
 echo "=================================================="
 
-WINEDEBUG=-all FEXInterpreter /opt/wine/bin/wine explorer /desktop=shell,1600x1040 /opt/TFM &>/dev/null &
+WINEDEBUG=-all DXVK_HUD=fps,gpuload,version taskset -c 4-7 box64 wine64 explorer /desktop=shell,1600x720 /opt/TFM &>/dev/null & FEXInterpreter /opt/wine/bin/wine64 explorer /desktop=shell,1600x1040 &>/dev/null
 
 elif [ $res = "4" ]
 then
@@ -154,7 +154,7 @@ echo "=================================================="
 
 read res
 
-WINEDEBUG=-all FEXInterpreter /opt/wine/bin/wine /desktop=shell,$res /opt/TFM &>/dev/null &
+WINEDEBUG=-all DXVK_HUD=fps,gpuload,version taskset -c 4-7 box64 wine64 explorer /desktop=shell,$res /opt/TFM &>/dev/null & FEXInterpreter /opt/wine/bin/wine64 explorer /desktop=shell,$res &>/dev/null
 
 elif [ $res = "0" ]
 then
