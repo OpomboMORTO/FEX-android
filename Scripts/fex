@@ -218,7 +218,10 @@ echo "=================================================="
 
        sudo touch /data/data/com.termux/files/home/Fex/opt/chroot
        
-       termux-x11 :1 &>/dev/null & pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1 &>/dev/null & sleep 1
+       termux-x11 :0 &>/dev/null & pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1 &>/dev/null & sleep 1
+	
+       sudo mount --bind $PREFIX/tmp/.X11-unix $folder/tmp/.X11-unix
+	
        
 clear
 
