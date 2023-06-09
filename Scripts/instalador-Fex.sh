@@ -420,9 +420,9 @@ sudo curl -O https://raw.githubusercontent.com/OpomboMORTO/FEX-android/main/Root
 
 sudo mv start-fex /data/data/com.termux/files/home/Fex/opt/Scripts
 
-sudo rm -f /data/data/com.termux/files/home/Fex/opt start
+sudo rm -f /data/data/com.termux/files/home/Fex/opt/start
 
-sudo rm -f /data/data/com.termux/files/home/Fex/opt/Scripts start-box64
+sudo rm -f /data/data/com.termux/files/home/Fex/opt/Scripts/start-box64
 
 
 elif [ $opcao = 2 ]
