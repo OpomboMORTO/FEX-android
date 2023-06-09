@@ -250,8 +250,6 @@ echo "==============================="
 
 sleep 1
 
-sudo mkdir $HOME/Fex
-
 clear 
 
 if [ -f $PREFIX/bin/Fex ]
