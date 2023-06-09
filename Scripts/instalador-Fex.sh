@@ -148,7 +148,7 @@ echo "=                             ="
 echo "=                             ="
 echo "==============================="
 
-pkg install x11-repo root-repo -y &>/dev/null
+pkg install x11-repo -y &>/dev/null
 
 clear
 
@@ -218,7 +218,10 @@ echo "=                             ="
 echo "=                             ="
 echo "==============================="
 
-wget https://github.com/OpomboMORTO/FEX-android/raw/main/Apps/termux-x11-1.02.07-0-all.deb &>/dev/null && dpkg -i ./*.deb &>/dev/null && rm -rf ./*.deb &>/dev/null
+#wget https://github.com/OpomboMORTO/FEX-android/raw/main/Apps/termux-x11-1.02.07-0-all.deb &>/dev/null && dpkg -i ./*.deb &>/dev/null && rm -rf ./*.deb &>/dev/null
+
+wget https://github.com/Ilya114/Box64Droid/raw/main/apps/termux-x11-1.02.07-0-all.deb &>/dev/null
+dpkg -i termux-x11-1.02.07-0-all.deb &>/dev/null
 
 clear
 
@@ -266,11 +269,11 @@ echo "=                             ="
 echo "=                             ="
 echo "==============================="
 
+rm $PREFIX/bin/Fex
+
 sleep 1
 
 else
-
-sudo mkdir $PREFIX/bin/Fex
 
 echo "==============================="
 echo "=                             ="
@@ -289,7 +292,7 @@ fi
 
 clear
 
-if [ -f /storage/Fex ]
+if [ -d /storage/Fex ]
 then
 
 echo "==============================="
@@ -307,7 +310,7 @@ sleep 1
 
 else
 
-sudo mkdir /storage/Fex
+mkdir /storage/Fex
 
 echo "==============================="
 echo "=                             ="
@@ -508,7 +511,7 @@ rm box64droid-rootfs-beta-chroot.tar.xz &>/dev/null
 elif [ $opcao = 2 ]
 then
 
-rm -rf box64droid-rootfs-beta.tar.xz &>/dev/null
+rm box64droid-rootfs-beta.tar.xz &>/dev/null
 
 fi
 
