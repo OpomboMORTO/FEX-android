@@ -75,7 +75,7 @@ echo "==============================="
 
 clear 
 
-termux-setup-storage & sleep 9 &>dev/null
+termux-setup-storage & sleep 3 &>dev/null
 
 echo "==============================="
 echo "=                             ="
@@ -133,7 +133,7 @@ echo "=                             ="
 echo "=                             ="
 echo "==============================="
 
-pkg update && pkg upgrade -y 
+pkg update -y
 
 clear
 
