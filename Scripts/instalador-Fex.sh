@@ -182,11 +182,11 @@ echo "==============================="
 if [ $opcao = 1 ]
 then
 
-       pkg install pulseaudio wget tsu xkeyboard-config wget -y &>/dev/null
+       pkg install xwayland xorg-server-xvfb pulseaudio wget tsu xkeyboard-config wget -y &>/dev/null
 
 elif [ $opcao = 2 ]
 then
-       pkg install pulseaudio wget xkeyboard-config proot-distro wget -y &>/dev/null  
+       pkg install xwayland xorg-server-xvfb pulseaudio wget xkeyboard-config proot-distro wget -y &>/dev/null  
 
 fi
 
