@@ -257,7 +257,7 @@ echo "=================================================="
 
         echo -e " [ Unmounting sdcard ... ]"
 
-        sudo umount $folder/storage/emulated/0/
+        sudo umount $folder/sdcard
 
         echo -e " [ Unmounting /sys ... ]"
 
