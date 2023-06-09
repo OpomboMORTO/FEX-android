@@ -426,6 +426,7 @@ sudo rm -f /data/data/com.termux/files/home/Fex/opt/Box64Droid.conf
 
 sudo rm -f /data/data/com.termux/files/home/Fex/opt/Scripts/start-box64
 
+cd $HOME
 
 elif [ $opcao = 2 ]
 then
@@ -445,6 +446,8 @@ cd Scripts
 rm -f start-box64
 
 curl -O https://raw.githubusercontent.com/OpomboMORTO/FEX-android/main/Rootfs/Ubuntu/opt/start-fex && chmod +x start-fex
+
+cd $HOME
 
 fi
 
