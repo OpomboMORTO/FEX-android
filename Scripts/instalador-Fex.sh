@@ -218,7 +218,7 @@ echo "=                             ="
 echo "=                             ="
 echo "==============================="
 
-wget https://github.com/OpomboMORTO/FEX-android/raw/main/Apps/termux-x11-1.02.07-0-all.deb &>/dev/null && dpkg -i ./*.deb &>/dev/null && rm -rf ./*.deb &>/dev/null
+wget https://github.com/OpomboMORTO/FEX-android/raw/b41929dc029e30ea7bf902f2803bdc7cad88859f/Apps/termux-x11-nightly-1.02.07-0-all.deb &>/dev/null && dpkg -i ./*.deb &>/dev/null && rm -rf ./*.deb &>/dev/null
 
 clear
 
