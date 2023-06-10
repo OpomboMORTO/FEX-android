@@ -75,7 +75,7 @@ echo "==============================="
 
 clear 
 
-termux-setup-storage & sleep 3 &>dev/null
+termux-setup-storage & sleep 3
 
 echo "==============================="
 echo "=                             ="
