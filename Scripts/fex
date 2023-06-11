@@ -302,13 +302,13 @@ echo "|   |____________________________°_°_°___|   |    |"
 echo "|                                            |    |"
 echo "=================================================="
 
-if [ -f ~/Fex ]
+if [ -d ~/Fex ]
     then
-        sudo rm -r ~/Fex
-        rm $PREFIX/bin/Fex
+        sudo rm -rf ~/Fex
+        rm $PREFIX/bin/fex
     else
         proot-distro remove ubuntu &>/dev/null
-        rm $PREFIX/bin/Fex
+        rm $PREFIX/bin/fex
 fi
 
 elif [ $opcao = 3 ]
