@@ -505,12 +505,12 @@ rm -rf instalador-Fex.sh &>/dev/null
 if [ $opcao = 1 ]
 then
 
-rm box64droid-rootfs-beta-chroot.tar.xz &>/dev/null
+#rm box64droid-rootfs-beta-chroot.tar.xz &>/dev/null
 
 elif [ $opcao = 2 ]
 then
 
-rm box64droid-rootfs-beta.tar.xz &>/dev/null
+#rm box64droid-rootfs-beta.tar.xz &>/dev/null
 
 fi
 
